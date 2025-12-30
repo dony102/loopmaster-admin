@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -15,14 +16,14 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #1a1b2e 0%, #16172b 50%, #0d0e1a 100%);
             min-height: 100vh;
             color: #ffffff;
         }
-        
+
         /* ==================== LOCK SCREEN ==================== */
         #lockScreen {
             position: fixed;
@@ -36,7 +37,7 @@
             justify-content: center;
             z-index: 9999;
         }
-        
+
         .lock-container {
             background: rgba(30, 32, 58, 0.9);
             border-radius: 16px;
@@ -47,25 +48,25 @@
             width: 90%;
             max-width: 340px;
         }
-        
+
         .lock-icon {
             font-size: 48px;
             margin-bottom: 16px;
         }
-        
+
         .lock-title {
             color: #a78bfa;
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 8px;
         }
-        
+
         .lock-subtitle {
             color: #9ca3af;
             font-size: 0.9rem;
             margin-bottom: 24px;
         }
-        
+
         .pin-input {
             background: rgba(26, 27, 46, 0.8);
             border: 2px solid rgba(0, 212, 255, 0.3);
@@ -81,17 +82,17 @@
             outline: none;
             transition: border-color 0.3s;
         }
-        
+
         .pin-input:focus {
             border-color: #00d4ff;
         }
-        
+
         .pin-input::placeholder {
             color: #4b5563;
             letter-spacing: 4px;
             font-size: 1rem;
         }
-        
+
         .unlock-btn {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
@@ -108,53 +109,63 @@
             gap: 8px;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        
+
         .unlock-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
         }
-        
+
         .error-msg {
             color: #ef4444;
             font-size: 0.85rem;
             margin-top: 12px;
             display: none;
         }
-        
+
         .error-msg.show {
             display: block;
             animation: shake 0.3s ease;
         }
-        
+
         @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(5px);
+            }
         }
-        
+
         /* ==================== MAIN APP ==================== */
         #mainApp {
             display: none;
             padding: 20px;
         }
-        
+
         .container {
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         h1 {
             text-align: center;
             color: #00d4ff;
             margin-bottom: 30px;
             font-size: 1.8rem;
         }
-        
+
         h1 span {
             font-size: 2rem;
             margin-right: 10px;
         }
-        
+
         .info-banner {
             background: rgba(0, 212, 255, 0.1);
             border: 1px solid rgba(0, 212, 255, 0.3);
@@ -166,7 +177,7 @@
             gap: 10px;
             font-size: 0.9rem;
         }
-        
+
         .info-banner .icon {
             background: #00d4ff;
             color: #1a1b2e;
@@ -180,7 +191,7 @@
             font-size: 14px;
             flex-shrink: 0;
         }
-        
+
         .card {
             background: rgba(45, 46, 82, 0.5);
             border-radius: 12px;
@@ -188,7 +199,7 @@
             margin-bottom: 16px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .card-title {
             display: flex;
             align-items: center;
@@ -197,24 +208,35 @@
             font-size: 1.1rem;
             font-weight: 600;
         }
-        
-        .card-title.generate { color: #00d4ff; }
-        .card-title.reset { color: #10b981; }
-        .card-title.revoke { color: #ef4444; }
-        .card-title.database { color: #8b5cf6; }
-        
+
+        .card-title.generate {
+            color: #00d4ff;
+        }
+
+        .card-title.reset {
+            color: #10b981;
+        }
+
+        .card-title.revoke {
+            color: #ef4444;
+        }
+
+        .card-title.database {
+            color: #8b5cf6;
+        }
+
         .card-subtitle {
             color: #9ca3af;
             font-size: 0.85rem;
             margin-bottom: 14px;
         }
-        
+
         .input-row {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
         }
-        
+
         input[type="text"] {
             flex: 1;
             min-width: 200px;
@@ -227,15 +249,15 @@
             outline: none;
             transition: border-color 0.3s;
         }
-        
+
         input[type="text"]:focus {
             border-color: #00d4ff;
         }
-        
+
         input[type="text"]::placeholder {
             color: #6b7280;
         }
-        
+
         button {
             display: flex;
             align-items: center;
@@ -249,37 +271,37 @@
             transition: transform 0.2s, opacity 0.2s;
             white-space: nowrap;
         }
-        
+
         button:hover {
             transform: translateY(-2px);
             opacity: 0.9;
         }
-        
+
         button:active {
             transform: translateY(0);
         }
-        
+
         .btn-generate {
             background: #00d4ff;
             color: #1a1b2e;
         }
-        
+
         .btn-reset {
             background: #10b981;
             color: #ffffff;
         }
-        
+
         .btn-revoke {
             background: #ef4444;
             color: #ffffff;
         }
-        
+
         .btn-refresh {
             background: #8b5cf6;
             color: #ffffff;
             margin-bottom: 12px;
         }
-        
+
         .result-box {
             margin-top: 14px;
             padding: 14px;
@@ -287,17 +309,17 @@
             border-radius: 8px;
             display: none;
         }
-        
+
         .result-box.show {
             display: block;
         }
-        
+
         .result-label {
             color: #9ca3af;
             font-size: 0.8rem;
             margin-bottom: 6px;
         }
-        
+
         .result-value {
             font-family: 'Courier New', monospace;
             font-size: 1.2rem;
@@ -308,29 +330,29 @@
             background: rgba(0, 212, 255, 0.1);
             border-radius: 4px;
         }
-        
+
         .result-value:hover {
             background: rgba(0, 212, 255, 0.2);
         }
-        
+
         .copy-hint {
             color: #6b7280;
             font-size: 0.75rem;
             margin-top: 6px;
         }
-        
+
         /* Database Table */
         .table-container {
             overflow-x: auto;
             margin-top: 12px;
         }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.85rem;
         }
-        
+
         th {
             background: rgba(0, 0, 0, 0.3);
             padding: 10px 12px;
@@ -338,26 +360,26 @@
             font-weight: 600;
             color: #9ca3af;
         }
-        
+
         td {
             padding: 10px 12px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         tr:hover td {
             background: rgba(255, 255, 255, 0.02);
         }
-        
+
         .status-active {
             color: #10b981;
             font-weight: 600;
         }
-        
+
         .status-revoked {
             color: #ef4444;
             font-weight: 600;
         }
-        
+
         .license-count {
             display: flex;
             align-items: center;
@@ -366,13 +388,13 @@
             color: #fbbf24;
             font-size: 0.9rem;
         }
-        
+
         .empty-state {
             text-align: center;
             padding: 30px;
             color: #6b7280;
         }
-        
+
         /* Toast notification */
         .toast {
             position: fixed;
@@ -387,17 +409,24 @@
             z-index: 1000;
             font-size: 0.9rem;
         }
-        
+
         .toast.show {
             display: block;
             animation: fadeIn 0.3s ease;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateX(-50%) translateY(20px); }
-            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
         }
-        
+
         /* Logout button */
         .logout-btn {
             position: fixed;
@@ -409,12 +438,13 @@
             padding: 8px 16px;
             font-size: 0.85rem;
         }
-        
+
         .logout-btn:hover {
             background: rgba(239, 68, 68, 0.3);
         }
     </style>
 </head>
+
 <body>
     <!-- LOCK SCREEN -->
     <div id="lockScreen">
@@ -422,26 +452,27 @@
             <div class="lock-icon">🔐</div>
             <div class="lock-title">Admin Access</div>
             <div class="lock-subtitle">Enter PIN to continue</div>
-            <input type="password" class="pin-input" id="pinInput" placeholder="Enter 6-digit" maxlength="6" inputmode="numeric" pattern="[0-9]*">
+            <input type="password" class="pin-input" id="pinInput" placeholder="Enter 6-digit" maxlength="6"
+                inputmode="numeric" pattern="[0-9]*">
             <button class="unlock-btn" onclick="unlock()">
                 🔓 Unlock
             </button>
             <div class="error-msg" id="errorMsg">❌ PIN salah. Coba lagi.</div>
         </div>
     </div>
-    
+
     <!-- MAIN APP -->
     <div id="mainApp">
         <button class="logout-btn" onclick="logout()">🚪 Lock</button>
-        
+
         <div class="container">
             <h1><span>🔑</span>License Admin</h1>
-            
+
             <div class="info-banner">
                 <div class="icon">ℹ</div>
                 <span>Masukkan Machine ID dari user untuk generate license atau reset code.</span>
             </div>
-            
+
             <!-- Generate License Key -->
             <div class="card">
                 <div class="card-title generate">🔑 Generate License Key</div>
@@ -458,7 +489,7 @@
                     <div class="copy-hint">📋 Tap to copy</div>
                 </div>
             </div>
-            
+
             <!-- Generate Reset Code -->
             <div class="card">
                 <div class="card-title reset">🔄 Generate Reset Code</div>
@@ -475,7 +506,7 @@
                     <div class="copy-hint">📋 Tap to copy</div>
                 </div>
             </div>
-            
+
             <!-- Revoke License -->
             <div class="card">
                 <div class="card-title revoke">🚫 Revoke License</div>
@@ -487,16 +518,16 @@
                     </button>
                 </div>
             </div>
-            
+
             <!-- License Database -->
             <div class="card">
                 <div class="card-title database">📋 License Database</div>
                 <button class="btn-refresh" onclick="refreshDatabase()">🔄 Refresh</button>
-                
+
                 <div class="license-count" id="licenseCount">
                     🔑 Licenses (0)
                 </div>
-                
+
                 <div class="table-container">
                     <table id="licenseTable">
                         <thead>
@@ -517,21 +548,21 @@
             </div>
         </div>
     </div>
-    
+
     <div class="toast" id="toast">Copied!</div>
-    
+
     <script>
         // ==================== CONFIG ====================
         // PIN untuk akses admin (6 digit)
-        const ADMIN_PIN = "102924";
-        
+        const ADMIN_PIN = "180201";
+
         // SECRET KEY - Must match LicenseManager.kt!
         const SECRET_KEY = "LOOPMASTER_PRO_2024_SECRET_KEY";
-        
+
         // Storage keys
         const STORAGE_KEY = "loopmaster_licenses";
         const SESSION_KEY = "loopmaster_admin_session";
-        
+
         // ==================== AUTH ====================
         function checkSession() {
             const session = sessionStorage.getItem(SESSION_KEY);
@@ -539,7 +570,7 @@
                 showApp();
             }
         }
-        
+
         function unlock() {
             const pin = document.getElementById('pinInput').value;
             if (pin === ADMIN_PIN) {
@@ -553,27 +584,27 @@
                 }, 2000);
             }
         }
-        
+
         function logout() {
             sessionStorage.removeItem(SESSION_KEY);
             document.getElementById('lockScreen').style.display = 'flex';
             document.getElementById('mainApp').style.display = 'none';
             document.getElementById('pinInput').value = '';
         }
-        
+
         function showApp() {
             document.getElementById('lockScreen').style.display = 'none';
             document.getElementById('mainApp').style.display = 'block';
             refreshDatabase();
         }
-        
+
         // Enter key to unlock
-        document.getElementById('pinInput').addEventListener('keyup', function(e) {
+        document.getElementById('pinInput').addEventListener('keyup', function (e) {
             if (e.key === 'Enter') {
                 unlock();
             }
         });
-        
+
         // ==================== LICENSE FUNCTIONS ====================
         async function sha256(message) {
             const msgBuffer = new TextEncoder().encode(message);
@@ -581,47 +612,47 @@
             const hashArray = Array.from(new Uint8Array(hashBuffer));
             return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         }
-        
+
         async function generateLicenseKey(machineId) {
             const rawId = machineId.replace(/-/g, '').replace(/\s/g, '').toLowerCase();
             const input = rawId + SECRET_KEY;
             const hash = await sha256(input);
             const hex16 = hash.substring(0, 16).toUpperCase();
-            return `${hex16.substr(0,4)}-${hex16.substr(4,4)}-${hex16.substr(8,4)}-${hex16.substr(12,4)}`;
+            return `${hex16.substr(0, 4)}-${hex16.substr(4, 4)}-${hex16.substr(8, 4)}-${hex16.substr(12, 4)}`;
         }
-        
+
         async function generateResetCode(machineId) {
             const rawId = machineId.replace(/-/g, '').replace(/\s/g, '').toLowerCase();
             const input = rawId + SECRET_KEY + "_RESET";
             const hash = await sha256(input);
             const hex16 = hash.substring(0, 16).toUpperCase();
-            return `RST-${hex16.substr(0,4)}-${hex16.substr(4,4)}-${hex16.substr(8,4)}`;
+            return `RST-${hex16.substr(0, 4)}-${hex16.substr(4, 4)}-${hex16.substr(8, 4)}`;
         }
-        
+
         function loadLicenses() {
             const data = localStorage.getItem(STORAGE_KEY);
             return data ? JSON.parse(data) : [];
         }
-        
+
         function saveLicenses(licenses) {
             localStorage.setItem(STORAGE_KEY, JSON.stringify(licenses));
         }
-        
+
         async function generateLicense() {
             const machineId = document.getElementById('machineIdInput').value.trim();
             if (!machineId) {
                 alert('Please enter a Machine ID');
                 return;
             }
-            
+
             const licenseKey = await generateLicenseKey(machineId);
-            
+
             document.getElementById('licenseValue').textContent = licenseKey;
             document.getElementById('licenseResult').classList.add('show');
-            
+
             const licenses = loadLicenses();
             const existing = licenses.find(l => l.machineId.toUpperCase() === machineId.toUpperCase());
-            
+
             if (!existing) {
                 licenses.push({
                     machineId: machineId.toUpperCase(),
@@ -631,33 +662,33 @@
                 });
                 saveLicenses(licenses);
             }
-            
+
             refreshDatabase();
         }
-        
+
         async function generateReset() {
             const machineId = document.getElementById('resetMachineId').value.trim();
             if (!machineId) {
                 alert('Please enter a Machine ID');
                 return;
             }
-            
+
             const resetCode = await generateResetCode(machineId);
-            
+
             document.getElementById('resetValue').textContent = resetCode;
             document.getElementById('resetResult').classList.add('show');
         }
-        
+
         function revokeLicense() {
             const machineId = document.getElementById('revokeMachineId').value.trim();
             if (!machineId) {
                 alert('Please enter a Machine ID');
                 return;
             }
-            
+
             const licenses = loadLicenses();
             const license = licenses.find(l => l.machineId.toUpperCase() === machineId.toUpperCase());
-            
+
             if (license) {
                 license.status = 'revoked';
                 saveLicenses(licenses);
@@ -667,23 +698,23 @@
                 alert('Machine ID not found');
             }
         }
-        
+
         function refreshDatabase() {
             const licenses = loadLicenses();
             const tbody = document.getElementById('licenseTableBody');
             const emptyState = document.getElementById('emptyState');
             const countEl = document.getElementById('licenseCount');
-            
+
             countEl.textContent = `🔑 Licenses (${licenses.length})`;
-            
+
             if (licenses.length === 0) {
                 tbody.innerHTML = '';
                 emptyState.style.display = 'block';
                 return;
             }
-            
+
             emptyState.style.display = 'none';
-            
+
             tbody.innerHTML = licenses.map(license => `
                 <tr>
                     <td style="font-family: monospace; font-size: 0.75rem">${license.machineId}</td>
@@ -695,7 +726,7 @@
                 </tr>
             `).join('');
         }
-        
+
         function formatDate(isoString) {
             const date = new Date(isoString);
             return date.toLocaleDateString('id-ID', {
@@ -704,13 +735,13 @@
                 year: '2-digit'
             });
         }
-        
+
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
                 showToast('Copied!');
             });
         }
-        
+
         function showToast(message) {
             const toast = document.getElementById('toast');
             toast.textContent = message;
@@ -719,14 +750,15 @@
                 toast.classList.remove('show');
             }, 1500);
         }
-        
+
         // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js').catch(() => {});
+            navigator.serviceWorker.register('sw.js').catch(() => { });
         }
-        
+
         // Initialize
         checkSession();
     </script>
 </body>
+
 </html>
